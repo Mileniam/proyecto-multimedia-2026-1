@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIENDA DE GATOS (Proyecto Multimedia - SPA)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- barra de scroll -->
+   <div id="scrollProgress" class="progress-bar"></div> 
+
+    <!-- cabecera, logo y menu desplegable en modo movil -->
+    <header>
+        <div class="logo">
+            <h1>Tienda de Gatos</h1>
+            <h2>Proyecto MultiMedia 2026</h2>
+        </div>
+        
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="inicio" class="nav-link" data-section="inicio">Inicio</a></li>
+                    <li><a href="servicio" class="nav-link" data-section="servicios">Servicios</a></li>
+                    <li><a href="galeria" class="nav-link" data-section="galeria">Galería</a></li>
+                    <li><a href="contacto" class="nav-link" data-section="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        
+            <button id="menuBtn" class="menu-btn">&#9776;</button>
+    </header>
+
+    <!-- contenido de la pagina a raves de las secciones -->
+    <main>
+
+        <!-- INICIO -->
+        <section id="inicio" class="content-section active-section">
+            <article>
+                <h2>Bienvenidos a la tienda de gatos</h2>
+                <p>Esta es una pagina llena de fotos de gatos listos para recibir un hogar.</p>
+            </article>
+        </section>
+
+        <!-- SERVICIOS -->
+        <section id="servicios" class="content-section">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-container">
+                <article>
+                    <h3>Adopcion</h3>
+                    <p>Ofrecemos servicios de adopcion de cualquiera de los gatitos que tenemos en este momento a nuestro cuidado. Para ver mas visite nuestra galeria.</p>
+                </article>
+                <article>
+                    <h3>Productos para gato</h3>
+                    <p>Ademas de poder adoptar alguno de los gatos que tenemos, tambien puedes comprar productos para tus gatitos ya en casa o regalarlos a los que todavia no tienen un hogar.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- GALERIA -->
+        <section id="galeria" class="content-section">
+            <h2>Galería de Gatitos</h2>
+            <p>Un espacio dedicado a todos los gatitos que todavia no han encontrado un hogar, no esperes mas y adopta uno.</p>
+            
+            <!-- fotos de la galeria sacadas de internet -->
+            <div class="gallery-grid">
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500" alt="Un primer plano de un gato mirando a la cámara">
+                    <figcaption>Roberto. Te mirara al si no lo alimentas con sus croquetas favoritas</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://media.istockphoto.com/id/2151228146/es/foto/divertido-gato-pelirrojo-con-ojos-verdes-mirando-en-la-c%C3%A1mara.webp?a=1&b=1&s=612x612&w=0&k=20&c=lbipe13DzjnE9ULMcf4maNcD6QnGFDDCpKIt4FsJOe4=" alt="Placa de circuito electrónico con microprocesador iluminado en azul">
+                    <figcaption>Alfredo. Siempre quiere pescado y jugar.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://media.istockphoto.com/id/2211478033/es/foto/lindo-gato-atigrado-joven-sentado-olfateando-el-aire-exterior.webp?a=1&b=1&s=612x612&w=0&k=20&c=oVJG_5Kn7BWxiSMR6FGhLoqhAU7QkmjKst3l-ILlu_s=" alt="">
+                    <figcaption>Tina. Le gusta la tranquilidad y el silencio.</figcaption>
+                </figure>
+                <figure>
+                    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGdhdG9zfGVufDB8fDB8fHww" alt="">
+                    <figcaption>Samanta. Juega mucho afuera en el sol.</figcaption>
+                </figure>
+            </div>
+
+            <!-- boton para mas informacion sobre la adopcion -->
+            <div class="interactive-container">
+                <button id="toggle-btn">Detalles para la adopcion</button>
+                <div id="info-panel" class="hidden-panel">
+                    <h3>Pasos para adoptar a uno de nuestros gatos</h3>
+                    <p>Para adoptar a uno de nuestros gatitos debe ir a la seccion de contacto, poner su nombre y su correo electronico para agilisar la adopcion de minino.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO -->
+       <section id="contacto" class="content-section">
+            <h2>Contáctanos</h2>
+            <p>¿Tienes alguna duda o animal que adoptar en mente? Escríbenos directamente.</p>
+            
+            <!-- formulario -->
+            <form id="contactForm" novalidate>
+                <div class="form-control">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo">
+                    <!-- mensaje de error -->
+                    <span class="error-message" id="error-nombre"></span>
+                </div>
+                
+                <div class="form-control">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com">
+                    <span class="error-message" id="error-correo"></span>
+                </div>
+
+                <div class="form-control">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <span class="error-message" id="error-mensaje"></span>
+                </div>
+                
+                <button type="submit" id="submitBtn">Enviar Mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- pie de pagina -->
+    <footer>
+        <p>&copy; Tienda de Gatos 2026 - Programación Multimedia. </p>
+    </footer>
+
+    <!-- conexion con los archivo javascrip :P -->
+    <script src="main.js"></script>
+    <script src="js/validaciones.js"></script>
+</body>
+</html>

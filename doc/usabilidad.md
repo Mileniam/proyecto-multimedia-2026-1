@@ -26,6 +26,9 @@ En el diseño de nuestra SPA, la jerarquía visual se ha estructurado métricame
 
 ---
 
+### 1.1 Técnica de Jerarquía Visual Programática: Indicador de Progreso Focal
+Para mitigar la desorientación espacial típica en entornos hipermedia y optimizar los mecanismos de atención sostenida, se ha implementado un indicador dinámico de progreso (`#scrollProgress`). Desde la perspectiva de la psicología cognitiva, este componente actúa como un mapa conceptual en tiempo real que reduce la incertidumbre del usuario respecto a la extensión del contenido visible. Al fijar un estímulo lumínico sutil en la periferia superior, se guía el foco del procesamiento atencional sin interrumpir la lectura central (atención selectiva), proporcionando retroalimentación constante sobre el estado de la exploración del documento.
+
 ## 2. Justificación de la Paleta de Colores (Teoría del Color y Contraste)
 
 La selección cromática no responde a criterios estéticos arbitrarios, sino a la optimización de los canales de la percepción visual y la reducción de la fatiga ocular. La paleta de colores implementada se detalla y justifica a continuación:
